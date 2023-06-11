@@ -1,6 +1,5 @@
-// your code here
-function update(){
-	 var name = document.getElementById("name").value;
+function updateURL() {
+      var name = document.getElementById("name").value;
       var year = document.getElementById("year").value;
 
       var urlString = "https://localhost:8080/";
@@ -14,4 +13,4 @@ function update(){
       }
 
       document.getElementById("url").textContent = urlString;
-})
+    }
