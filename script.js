@@ -1,16 +1,14 @@
-function updateURL() {
+document.addEventListener("DOMContentLoaded", function() {
+      var form = document.getElementById("myForm");
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        updateURL();
+      });
+    });
+
+    function updateURL() {
       var name = document.getElementById("name").value;
       var year = document.getElementById("year").value;
-
-      var urlString = "https://localhost:8080/";
-      
-      if (name) {
-        urlString += "?name=" + encodeURIComponent(name);
-      }
-      
-      if (year) {
-        urlString += (name ? "&" : "?") + "year=" + encodeURIComponent(year);
-      }
-
-      document.getElementById("url").textContent = urlString;
+      var url = "https://localhost:8080/?name=" + encodeURIComponent(name) + "&year=" + encodeURIComponent(year);
+      document.getElementById("url").textContent = url;
     }

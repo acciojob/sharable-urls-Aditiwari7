@@ -8,24 +8,17 @@
 		</style>
 	</head> -->
   <body>
-	   <form>
-		  <h3 id="url">https://localhost:8080/</h3>
-		  <br><br>
-		  
-          <label for="name">Name:</label>
-          <input type="text" id="name">
+	   <form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
 
-          <br><br>
+    <label for="year">Year:</label>
+    <input type="number" id="year" name="year" required><br><br>
 
-          <label for="year">Year:</label>
-          <input type="number" id="year">
+    <button type="submit" id="button">Submit</button><br><br>
+  </form>
 
-          <br><br>
-
-          <button type="button" id="button" onclick="updateURL()">Submit</button>
-
-          
-	  </form>
+  <h3 id="url">https://localhost:8080/</h3>
     <script type="text/javascript" src="./script.js">
 </script>
   </body>
